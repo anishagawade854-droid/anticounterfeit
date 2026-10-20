@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Product | AntiCounterfeit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>🛡️ AntiCounterfeit</h2>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="manufacturer.html">Manufacturer Portal</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <p class="tagline">Customer Verification</p>
+        <h1>Is Your Product Genuine?</h1>
+
+        <p class="description">
+            Enter the product ID below to check its registration securely on the Sepolia blockchain network.
+        </p>
+
+        <section class="info-card form-card">
+            <label for="verifyProductId">Product ID</label>
+
+            <input
+                id="verifyProductId"
+                type="text"
+                placeholder="Enter Product ID (e.g. PROD001)"
+                autocomplete="off"
+            >
+
+            <button
+                id="verifyButton"
+                class="btn primary full-width"
+                type="button"
+            >
+                Verify Product
+            </button>
+
+            <p id="verifyStatus" class="status" aria-live="polite">
+                Enter a Product ID above to check its blockchain record.
+            </p>
+
+            <div id="productResult" hidden>
+                <h2 id="resultHeading"></h2>
+                <p id="resultDetails" class="status"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Blockchain-Based Anti-Counterfeit Product Verification System<br>
+        Contract on Sepolia:
+        <a target="_blank" rel="noopener"
+           href="https://sepolia.etherscan.io/address/0x9171173ecC13f4B7B0F89D19DAc087529af3b0C3">
+            0x9171...b0C3</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

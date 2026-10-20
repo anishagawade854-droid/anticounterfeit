@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturer Portal | AntiCounterfeit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>🛡️ AntiCounterfeit</h2>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="verify.html">Verify Product</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <p class="tagline">Manufacturer Portal</p>
+        <h1>Register a Product</h1>
+        <p class="description">
+            Anchor authentic product details directly onto the Sepolia blockchain network to enable instant consumer verification.
+        </p>
+
+        <section class="info-card form-card">
+            <button id="connectWallet" class="btn" type="button">Connect MetaMask</button>
+            <p id="walletStatus" class="status">Wallet not connected</p>
+
+            <form id="productForm">
+                <label for="productId">Product ID</label>
+                <input id="productId" required placeholder="e.g. PROD001">
+
+                <label for="productName">Product Name</label>
+                <input id="productName" required placeholder="e.g. Premium Leather Shoes">
+
+                <label for="manufacturer">Manufacturer</label>
+                <input id="manufacturer" required placeholder="e.g. Acme Corporation">
+
+                <label for="batchNumber">Batch Number</label>
+                <input id="batchNumber" required placeholder="e.g. BATCH2026">
+
+                <label for="manufacturingDate">Manufacturing Date</label>
+                <input id="manufacturingDate" type="date" required>
+
+                <button id="registerBtn" type="submit" class="btn primary full-width">
+                    Register on Blockchain
+                </button>
+            </form>
+
+            <p id="result" class="status" aria-live="polite"></p>
+
+            <div id="qrBox" hidden>
+                <div id="qrcode"></div>
+                <p id="qrLink" class="status"></p>
+                <div class="qr-buttons">
+                    <button id="downloadQr" class="btn" type="button">Download QR</button>
+                    <button id="copyLink" class="btn" type="button">Copy Link</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Blockchain-Based Anti-Counterfeit Product Verification System<br>
+        Contract on Sepolia:
+        <a target="_blank" rel="noopener"
+           href="https://sepolia.etherscan.io/address/0x9171173ecC13f4B7B0F89D19DAc087529af3b0C3">
+            0x9171...b0C3</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
